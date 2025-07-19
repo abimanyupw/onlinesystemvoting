@@ -25,8 +25,8 @@ Route::post('/register', [RegisterController::class, 'store']);
 
 Route::get('/dashboard',[DashboardController::class,'index'])->middleware('auth');
 
-Route::get('/voting/show',[VotingController::class,'show'])->name('voting.show')->middleware('auth','admin');
-Route::post('/voting/vote',[VotingController::class,'vote'])->name('voting.vote')->middleware('auth','admin');
+Route::get('/voting/show',[VotingController::class,'show'])->name('voting.show')->middleware('auth');
+Route::post('/voting/vote',[VotingController::class,'vote'])->name('voting.vote')->middleware('auth');
 
 
 Route::resource('events',EventController::class);
