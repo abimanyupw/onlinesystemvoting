@@ -13,8 +13,8 @@
                             <a class="nav-link fs-5 {{ Request::is('dashboard') ? 'active' : '' }}" href="/dashboard">
                                 <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt fa-lg"></i></div><span class="fw-semibold ">Dashboard</span>
                             </a>
-                            <a class="nav-link fs-5 {{ Request::is('dashboard/kelas*') ? 'active' : '' }}" href="/dashboard/voting">
-                                <div class="sb-nav-link-icon"><i class="fa-solid fa-chalkboard-user fa-lg"></i></div><span class="fw-semibold ">Voting</span>
+                            <a class="nav-link fs-5 {{ Request::is('result*') ? 'active' : '' }}" href="/result">
+                                <div class="sb-nav-link-icon"><i class="fa-solid fa-calendar-day fa-lg"></i></div><span class="fw-semibold ">Event Voting</span>
                             </a>
                             @can('admin')
                             <div class="sb-sidenav-menu-heading fw-bold"><span class="fs-6">ADMINISTRATOR</span></div>
@@ -27,8 +27,9 @@
                             </a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-bs-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                    <a class="nav-link fs-5 {{ Request::is('dashboard/materi*') ? 'active' : '' }}" href="/dashboard/materi"><div class="sb-nav-link-icon"><i class="fa-solid fa-file fa-lg"></i></div><span class="fw-semibold">Materi</span></a>
-                                    <a class="nav-link fs-5 {{ Request::is('dashboard/materi*') ? 'active' : '' }}" href="/dashboard/materi"><div class="sb-nav-link-icon"><i class="fa-solid fa-tags fa-lg"></i></div><span class="fw-semibold">Kategori Materi</span></a>
+                                    <a class="nav-link fs-5 {{ Request::is('') ? 'active' : '' }}" href=""><div class="sb-nav-link-icon"><i class="fa-solid fa-user-tie fa-lg"></i></div><span class="fw-semibold">Kandidat</span></a>
+                                    <a class="nav-link fs-5 {{ Request::is('') ? 'active' : '' }}" href=""><div class="sb-nav-link-icon"><i class="fa-solid fa-user fa-lg"></i></div><span class="fw-semibold">User</span></a>
+                                    <a class="nav-link fs-5 {{ Request::is('') ? 'active' : '' }}" href=""><div class="sb-nav-link-icon"><i class="fa-solid fa-calendar fa-lg"></i></div><span class="fw-semibold">Event</span></a>
                                     
                                 </nav>
                             </div>  
